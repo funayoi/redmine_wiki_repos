@@ -1,0 +1,14 @@
+<div id="wiki_repos">
+<%
+    @wiki_repos_setting = WikiReposSetting.find_or_create(@project.id)
+%>
+<% labelled_tabular_form_for :setting, @wiki_repos_setting,
+                             :url => {:controller => 'wiki_repos_settings',
+                             :action => 'update', :id => @project, :tab => 'wiki_repos'} do |f| %>
+  <p>
+  <%= f.text_field :base_path %><br/>
+  <%= f.text_field :index_page %><br/>
+  <%= f.text_field :extension %><br/>
+  </p>
+  <p><%= submit_tag "Create" %></p>
+<% end %></div>

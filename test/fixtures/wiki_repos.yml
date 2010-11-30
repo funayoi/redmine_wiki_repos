@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  projtct_id: 1
+  root_dir: MyString
+two:
+  id: 2
+  projtct_id: 1
+  root_dir: MyString

@@ -1,0 +1,7 @@
+# Japanese strings go here for Rails i18n
+ja:
+  wiki_repos: リポジトリWiki
+  field_base_path: 基底のディレクトリ
+  field_index_page: インデックスのページ名
+  field_extension: Wikiソースファイルの拡張子
+

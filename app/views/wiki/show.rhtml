@@ -1,6 +1,7 @@
 <div class="contextual">
 
-  <span>[synchronized? <%= WikiRepos.find_or_create(@content).synchronized? ? "Yes" : "No" %>]</span>
+  <% repo =  WikiRepos.find_or_create(@content) %>
+  <span>[synchronized? <%= repo.synchronized? ? "Yes" : "No" %>]</span>
 
 
 <% if @editable %>
@@ -14,6 +15,11 @@
 <% end %>
 <%= link_to_if_authorized(l(:label_history), {:action => 'history', :page => @page.title}, :class => 'icon icon-history') %>
 </div>
+
+<% if repo.change %>
+<div><%= repo.change.path %>
+</div>
+<% end %>
 
 <%= breadcrumb(@page.ancestors.reverse.collect {|parent| link_to h(parent.pretty_title), {:page => parent.title}}) %>
 

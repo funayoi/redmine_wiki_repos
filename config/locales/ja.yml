@@ -4,4 +4,5 @@ ja:
   field_base_path: 基底のディレクトリ
   field_index_page: インデックスのページ名
   field_extension: Wikiソースファイルの拡張子
+  donot_save: リポジトリに反映するためには、ここで保存せずに、変更内容を以下のファイルに上書き保存してリポジトリにコミットしてください。
 
